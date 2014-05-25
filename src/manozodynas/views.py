@@ -27,8 +27,9 @@ def login_view(request):
 
 
 def word_view(request):
+    words = Word.objects
     return render(request, 'manozodynas/words.html',
-                  {'words': Word.objects.all()})
+                  {'words': words})
 
 
 class WordInput(CreateView):

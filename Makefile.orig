@@ -1,0 +1,20 @@
+.PHONY: prepare_env run test
+
+prepare_env:
+	rm -fr ~/.buildout
+<<<<<<< HEAD
+=======
+	python ez_setup.py --user
+>>>>>>> 606ad5dba08d3ae43bfc07e6716127a40b0cdc1f
+	python bootstrap.py
+	bin/buildout
+	mkdir var || touch var/db
+	bin/django syncdb --noinput
+	bin/django migrate manozodynas
+
+run:
+	bin/django migrate manozodynas
+	bin/django runserver
+
+test:
+	bin/django test
