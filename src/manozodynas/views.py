@@ -5,8 +5,10 @@ from .forms import LoginForm
 from django.contrib.auth import login
 from .models import Word
 
+
 def index_view(request):
     return render(request, 'manozodynas/index.html', {})
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -19,8 +21,9 @@ def login_view(request):
     else:
         form = LoginForm()
     #import ipdb; ipdb.set_trace()
-    return render(request, 'manozodynas/login.html', {'form':form})
+    return render(request, 'manozodynas/login.html', {'form': form})
 
 
 def word_view(request):
-    return render(request, 'manozodynas/words.html', {'words':Word.objects.all()})
+    return render(request, 'manozodynas/words.html',
+                  {'words': Word.objects.all()})
