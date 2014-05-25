@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<title>Įvesti žodžiai</title>
+<title>Naujo žodžio įvestis</title>
 
 <!-- Meta Tags -->
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -20,7 +20,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="" media="screen,projection" type="text/css" />
 <link rel="stylesheet" href="" media="print" type="text/css" />
-<link rel="stylesheet" href="../styles/site.css" type="text/css" />
+<link rel="stylesheet" href="../styles/site.css" type="text/css" /> 
 
 <!-- RSS -->
 <link rel="alternate" href="" title="RSS Feed" type="application/rss+xml" />
@@ -31,13 +31,7 @@
 </head>
 
 <body>
-    {% if words != None %}
-        {% for word in words %}
-            <p class="word"> {{ word.word }} </p>
-        {% endfor %}
-    {% elif %}
-        Nėra žodžių!
-    {% endif%}
+    
 </body>
 </html>
 
