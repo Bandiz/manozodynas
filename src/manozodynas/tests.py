@@ -66,3 +66,15 @@ class LoginTestCase(StatefulTesting):
         })
         self.assertStatusCode(200)
         self.selectOne('.errorlist')
+
+
+class WordInputTestCase(StatefulTesting):
+    def test_new_word_input(self):
+        self.open(reverse('word_input'))
+        self.selectForm('#WordForm')
+        self.assertStatusCode(200)
+        self.submitForm({'word': 'veryawesomeword'})
+        self.assertStatusCode(302)
+        self.state['response'].content
+        self.open(reverse('words'))
+        self.assertTrue('veryawesomeword' in self.state['response'].content)

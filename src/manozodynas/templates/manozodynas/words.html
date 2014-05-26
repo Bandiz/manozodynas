@@ -20,24 +20,23 @@
 <!-- CSS -->
 <link rel="stylesheet" href="" media="screen,projection" type="text/css" />
 <link rel="stylesheet" href="" media="print" type="text/css" />
-<link rel="stylesheet" href="../styles/site.css" type="text/css" />
+<link rel="stylesheet" href="/styles/site.css" type="text/css" />
 
 <!-- RSS -->
 <link rel="alternate" href="" title="RSS Feed" type="application/rss+xml" />
 
 <!-- JavaScript -->
 <script src="" type="text/javascript"></script>
-
+</style>
 </head>
 
 <body>
-    {% if words != None %}
+    <table id="WordTable">
+        <tr><td class="TableHeader">Žodis</td></tr>
         {% for word in words %}
-            <p class="word"> {{ word.word }} </p>
+        <tr><td class="word"> {{ word.word }} </td></tr>
         {% endfor %}
-    {% elif %}
-        Nėra žodžių!
-    {% endif%}
+    </table>
 </body>
 </html>
 

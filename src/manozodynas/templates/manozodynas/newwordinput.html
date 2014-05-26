@@ -31,9 +31,9 @@
 </head>
 
 <body>
-    <form action='.' method='post' id='WordForm'>{% csrf_token %}
+    <form action="" method="POST" id="WordForm">{% csrf_token %}
         {{ form.as_p}}
-        <button>Įvesti žodį</button>
+        <input type="submit" value="Įvesti žodį" />
     </form>    
 </body>
 </html>

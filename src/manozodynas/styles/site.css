@@ -1,3 +1,7 @@
-.Word {
+.word {
     font-weight:bold;
+}
+
+.TableHeader {
+    font-size:14;
 }

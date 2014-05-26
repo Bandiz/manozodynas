@@ -27,12 +27,12 @@ def login_view(request):
 
 
 def word_view(request):
-    words = Word.objects
+    words = Word.objects.all()
     return render(request, 'manozodynas/words.html',
                   {'words': words})
 
 
 class WordInput(CreateView):
     model = Word
-    success_url = reverse_lazy('word_view')
+    success_url = reverse_lazy('words')
     template_name = 'manozodynas/newwordinput.html'
